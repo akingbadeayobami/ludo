@@ -1,0 +1,931 @@
+<html>
+<head>
+<title>Ludo</title> 
+<link href="css/style.css" rel="stylesheet"/>  
+</head>
+<body>
+<div id="wrap"> 
+  
+   <div id="leftSide">
+   		<div id="playerYellow">
+   			<input type="button" value="Dice Up" id="yButton"/> <br />
+			<div id="ydiceWrap">
+				<span class="diceResult1" id="yDresult1"></span> 
+				<span class="diceResult2" id="yDresult2"></span>
+			</div>
+			<div class="wrapButton">
+   			<input type="button" value="Move Seed A" id="yMoveButton1"/> <br />
+			<input type="button" value="Move Seed B" id="yMoveButton2"/> <br />
+			<input type="button" value="Move Seed C" id="yMoveButton3"/> <br />
+			<input type="button" value="Move Seed D" id="yMoveButton4"/> <br />
+			</div>	
+					<div class="seedHome">
+					<div class="innerSeedHome" id="196">  </div>
+					<div class="innerSeedHome" id="197">  </div>
+					<div class="innerSeedHome" id="198">  </div>
+					<div class="innerSeedHome" id="199">  </div>
+					</div>
+   		</div>
+   		
+   		<div id="playerRed">
+   			<input type="button" value="Dice Up" id="rButton"/> <br />
+			<div id="rdiceWrap">
+				<span class="diceResult1" id="rDresult1"></span> 
+				<span class="diceResult2" id="rDresult2"></span> <br /> 
+			</div>
+			<div class="wrapButton">			
+   			<input type="button" value="Move Seed A" id="rMoveButton1"/> <br />
+			<input type="button" value="Move Seed B" id="rMoveButton2"/> <br />
+			<input type="button" value="Move Seed C" id="rMoveButton3"/> <br />
+			<input type="button" value="Move Seed D" id="rMoveButton4"/> <br />  		
+			</div>	
+					<div class="seedHome">
+					<div class="innerSeedHome" id="296">  </div>
+					<div class="innerSeedHome" id="297">  </div>
+					<div class="innerSeedHome" id="298">  </div>
+					<div class="innerSeedHome" id="299">  </div>
+					</div>			
+   		</div>
+   </div>
+
+	<div id="board">
+
+			<div id="upperDiv">
+
+					<div id="yellowBox">
+                         
+					<div class="seedHouse">
+					<div class="innerSeedHouse" id="106">  </div>
+					<div class="innerSeedHouse" id="107">  </div>
+					<div class="innerSeedHouse" id="108">  </div>
+					<div class="innerSeedHouse" id="109">  </div>
+					</div>
+						
+
+						 
+					</div>
+
+					<div id="upper3by6">
+						<table border="1" cellspacing="0" cellpadding="10">
+							<tr> <td id="12">  </td><td id="13">  </td><td id="14">  </td> </tr>
+							<tr> <td id="11">  </td><td class="cGreen" id="401">  </td><td class="cGreen"  id="15">  </td> </tr>
+							<tr> <td id="10">  </td><td class="cGreen" id="402">  </td><td id="16">  </td> </tr>
+							<tr> <td id="9" >  </td><td class="cGreen" id="403">  </td><td id="17">  </td> </tr>
+							<tr> <td id="8">  </td><td class="cGreen" id="404">  </td><td id="18">  </td> </tr>
+							<tr> <td id="7">  </td><td class="cGreen" id="405">  </td><td id="19">  </td> </tr>
+						</table>
+					</div>
+
+				    <div id="greenBox">  
+					<div class="seedHouse">
+					<div class="innerSeedHouse" id="406">  </div>
+					<div class="innerSeedHouse" id="407">  </div>
+					<div class="innerSeedHouse" id="408">  </div>
+					<div class="innerSeedHouse" id="409">  </div>
+					</div>
+				    </div>
+
+			</div> <!-- End of Upper Div-->
+
+				<div id="middleDiv">
+					
+					<div id="left3by6">
+						<table border="1" cellspacing="0" cellpadding="10">
+							<tr> <td id="1">  </td><td class="cYellow" id="2">  </td><td id="3">  </td><td id="4">  </td><td id="5">  </td><td id="6">  </td>  </tr>
+							<tr> <td id="52">  </td><td class="cYellow" id="101">  </td><td class="cYellow" id="102">  </td><td class="cYellow" id="103">  </td><td class="cYellow" id="104">  </td><td class="cYellow" id="105">  </td> </tr>
+							<tr><td id="51">  </td><td id="50">  </td><td id="49">  </td><td id="48">  </td><td id="47">  </td><td id="46">  </td></tr>
+						</table>
+				    </div>
+
+				    <div id="center3by3">
+	<input type="button" value="Restart Game" id="restartButton"/> <br />
+				    </div>
+
+				    <div id="right3by6">
+				    	<table border="1" cellspacing="0" cellpadding="10">
+							<tr> <td id="20">  </td><td id="21">  </td><td id="22">  </td><td id="23">  </td><td id="24">  </td><td id="25">  </td> </tr>
+							<tr> <td class="cBlue" id="305">  </td><td class="cBlue" id="304">  </td><td class="cBlue" id="303">  </td><td class="cBlue" id="302">  </td><td class="cBlue" id="301">  </td><td id="26">  </td> </tr>
+							<tr> <td id="32">  </td><td id="31">  </td><td id="30">  </td><td id="29">  </td><td class="cBlue" id="28">  </td><td id="27">  </td> </tr>
+						</table>
+				    </div>
+
+			</div>   <!-- End of Middle Div-->
+
+				<div id="lowerDiv">
+			
+					<div id="redBox">                         
+					<div class="seedHouse">
+					<div class="innerSeedHouse" id="206">  </div>
+					<div class="innerSeedHouse" id="207">  </div>
+					<div class="innerSeedHouse" id="208">  </div>
+					<div class="innerSeedHouse" id="209">  </div>
+					</div>
+					</div>
+
+					<div id="lower3by6">
+						<table border="1" cellspacing="0" cellpadding="10">
+							<tr> <td id="45">  </td><td class="cRed" id="205">  </td><td id="33">  </td> </tr>
+							<tr> <td id="44">  </td><td class="cRed" id="204">  </td><td id="34">  </td> </tr>
+							<tr> <td id="43">  </td><td class="cRed" id="203">  </td><td id="35">  </td> </tr>
+							<tr> <td id="42">  </td><td class="cRed" id="202">  </td><td id="36">  </td> </tr>
+							<tr> <td class="cRed" id="41">  </td><td class="cRed" id="201">  </td><td id="37">  </td> </tr>
+							<tr> <td class="Y44" id="40">  </td><td id="39">  </td><td id="38">  </td> </tr>
+						</table>
+					</div>
+
+				    <div id="blueBox">
+					
+					
+					<div class="seedHouse">
+					<div class="innerSeedHouse" id="306">  </div>
+					<div class="innerSeedHouse" id="307">  </div>
+					<div class="innerSeedHouse" id="308">  </div>
+					<div class="innerSeedHouse" id="309">  </div>				
+			    	</div> 
+					
+					
+					
+				    </div>
+
+			</div>   <!-- End of Lower Div-->
+	</div> <!-- End of Board-->
+
+	<div id="rightSide"> 
+		<div id="playerGreen">
+   			<input type="button" value="Dice Up" id="gButton"/> <br />
+			<div id="gdiceWrap">
+				<span class="diceResult1" id="gDresult1"></span> 
+				<span class="diceResult2" id="gDresult2"></span> <br /> 
+			</div>
+			<div class="wrapButton">
+   			<input type="button" value="Move Seed 1" id="gMoveButton1"/> <br />
+			<input type="button" value="Move Seed 2" id="gMoveButton2"/> <br />
+			<input type="button" value="Move Seed 3" id="gMoveButton3"/> <br />
+			<input type="button" value="Move Seed 4" id="gMoveButton4"/> <br />   		
+			</div>	
+					<div class="seedHome">
+					<div class="innerSeedHome" id="496">  </div>
+					<div class="innerSeedHome" id="497">  </div>
+					<div class="innerSeedHome" id="498">  </div>
+					<div class="innerSeedHome" id="499">  </div>
+			</div>				
+   		</div>
+   		<div id="playerBlue">
+   			<input type="button" value="Dice Up" id="bButton"/> <br />
+			<div id="bdiceWrap">
+   			<span class="diceResult1" id="bDresult1"></span> 
+   			<span class="diceResult2" id="bDresult2"></span> <br /> 
+			</div>
+			<div class="wrapButton">
+   			<input type="button" value="Move Seed 1" id="bMoveButton1"/> <br />
+			<input type="button" value="Move Seed 2" id="bMoveButton2"/> <br />
+			<input type="button" value="Move Seed 3" id="bMoveButton3"/> <br />
+			<input type="button" value="Move Seed 4" id="bMoveButton4"/> <br />
+					</div>	
+					<div class="seedHome">
+					<div class="innerSeedHome" id="396">  </div>
+					<div class="innerSeedHome" id="397">  </div>
+					<div class="innerSeedHome" id="398">  </div>
+					<div class="innerSeedHome" id="399">  </div>
+					</div>	
+   		</div>
+	</div>
+
+</div> <!-- End of Wrap Div-->
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+    // GENERATION OF RANDOM NUMBERS
+$("#bButton").click( function () {
+    rand1 = Math.floor((Math.random() * 6 ) + 1);
+    rand2 = Math.floor((Math.random() * 6 ) + 1);
+     $("#bDresult1").text(rand1);
+	 $("#bDresult2").text(rand2);
+	});
+
+$("#rButton").click( function () {
+    rand1 = Math.floor((Math.random() * 6 ) + 1);
+    rand2 = Math.floor((Math.random() * 6 ) + 1);
+     $("#rDresult1").text(rand1);
+	 $("#rDresult2").text(rand2);
+	});
+
+$("#yButton").click( function () {
+    rand1 = Math.floor((Math.random() * 6 ) + 1);
+    rand2 = Math.floor((Math.random() * 6 ) + 1);
+     $("#yDresult1").text(rand1);
+	 $("#yDresult2").text(rand2);
+	});
+
+$("#gButton").click( function () {
+    rand1 = Math.floor((Math.random() * 6 ) + 1);
+    rand2 = Math.floor((Math.random() * 6 ) + 1);
+     $("#gDresult1").text(rand1);
+	 $("#gDresult2").text(rand2);
+	});
+
+
+var yellowSeedPosition = { '1' :0,  '2' :0,  '3' :0,  '4' :0};
+var redSeedPosition =    { '1' :0,  '2' :0,  '3' :0,  '4' :0};
+var greenSeedPosition =  { '1' :0,  '2' :0,  '3' :0,  '4' :0};
+var blueSeedPosition =   { '1' :0,  '2' :0,  '3' :0,  '4' :0};
+
+
+
+var yellowMovementPatternSeed1 = new Array(106, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 101, 102, 103, 104, 105, 196 );
+var yellowMovementPatternSeed2 = new Array(107, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 101, 102, 103, 104, 105, 197 );
+var yellowMovementPatternSeed3 = new Array(108, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 101, 102, 103, 104, 105, 198 );
+var yellowMovementPatternSeed4 = new Array(109, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 101, 102, 103, 104, 105, 199 );
+
+
+var redMovementPatternSeed1 = new Array(206, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 201, 202, 203, 204, 205, 296 );
+var redMovementPatternSeed2 = new Array(207, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 201, 202, 203, 204, 205, 297 );
+var redMovementPatternSeed3 = new Array(208, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 201, 202, 203, 204, 205, 298 );
+var redMovementPatternSeed4 = new Array(209, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 201, 202, 203, 204, 205, 299 );
+
+var blueMovementPatternSeed1 = new Array(306, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 301, 302, 303, 304, 305, 396 );
+var blueMovementPatternSeed2 = new Array(307, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 301, 302, 303, 304, 305, 397 );
+var blueMovementPatternSeed3 = new Array(308, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 301, 302, 303, 304, 305, 398 );
+var blueMovementPatternSeed4 = new Array(309, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 301, 302, 303, 304, 305, 399 );
+
+var greenMovementPatternSeed1 = new Array(406, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 401, 402, 403, 404, 405, 496 );
+var greenMovementPatternSeed2 = new Array(407, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 401, 402, 403, 404, 405, 497 );
+var greenMovementPatternSeed3 = new Array(408, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 401, 402, 403, 404, 405, 498 );
+var greenMovementPatternSeed4 = new Array(409, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 401, 402, 403, 404, 405, 499 );
+
+arrayLength = yellowMovementPatternSeed1.length;
+               
+			   
+			   
+			   // INITIAL SETTING OF BLUE POSITION
+ bSetPositionLocation(blueMovementPatternSeed1[blueSeedPosition[1]],blueMovementPatternSeed1[blueSeedPosition[1]],1);
+ bSetPositionLocation(blueMovementPatternSeed2[blueSeedPosition[2]],blueMovementPatternSeed2[blueSeedPosition[2]],2);
+ bSetPositionLocation(blueMovementPatternSeed3[blueSeedPosition[3]],blueMovementPatternSeed3[blueSeedPosition[3]],3);
+ bSetPositionLocation(blueMovementPatternSeed4[blueSeedPosition[4]],blueMovementPatternSeed4[blueSeedPosition[4]],4);
+               // INITIAL SETTING OF YELLOW POSITION
+ ySetPositionLocation(yellowMovementPatternSeed1[yellowSeedPosition[1]],yellowMovementPatternSeed1[yellowSeedPosition[1]],1); // @param2 former class cos it is the same value for old and new
+ ySetPositionLocation(yellowMovementPatternSeed2[yellowSeedPosition[2]],yellowMovementPatternSeed2[yellowSeedPosition[2]],2);
+ ySetPositionLocation(yellowMovementPatternSeed3[yellowSeedPosition[3]],yellowMovementPatternSeed3[yellowSeedPosition[3]],3);
+ ySetPositionLocation(yellowMovementPatternSeed4[yellowSeedPosition[4]],yellowMovementPatternSeed4[yellowSeedPosition[4]],4); 
+                // INITIAL SETTING OF GREEN POSITION
+ gSetPositionLocation(greenMovementPatternSeed1[greenSeedPosition[1]],greenMovementPatternSeed1[greenSeedPosition[1]],1);
+ gSetPositionLocation(greenMovementPatternSeed2[greenSeedPosition[2]],greenMovementPatternSeed2[greenSeedPosition[2]],2);
+ gSetPositionLocation(greenMovementPatternSeed3[greenSeedPosition[3]],greenMovementPatternSeed3[greenSeedPosition[3]],3);
+ gSetPositionLocation(greenMovementPatternSeed4[greenSeedPosition[4]],greenMovementPatternSeed4[greenSeedPosition[4]],4);
+                 // INITIAL SETTING OF RED POSITION
+ rSetPositionLocation(redMovementPatternSeed1[redSeedPosition[1]],redMovementPatternSeed1[redSeedPosition[1]],1); 
+ rSetPositionLocation(redMovementPatternSeed2[redSeedPosition[2]],redMovementPatternSeed2[redSeedPosition[2]],2); 
+ rSetPositionLocation(redMovementPatternSeed3[redSeedPosition[3]],redMovementPatternSeed3[redSeedPosition[3]],3); 
+ rSetPositionLocation(redMovementPatternSeed4[redSeedPosition[4]],redMovementPatternSeed4[redSeedPosition[4]],4); 
+
+ 
+  
+ // DICE HANDLING
+ function removeDiceClicked(){
+  $("#yDresult1").removeClass("diceClicked");
+  $("#yDresult2").removeClass("diceClicked");
+  $("#rDresult1").removeClass("diceClicked");
+  $("#rDresult2").removeClass("diceClicked");
+  $("#gDresult1").removeClass("diceClicked");
+  $("#gDresult2").removeClass("diceClicked");
+  $("#bDresult1").removeClass("diceClicked");
+  $("#bDresult2").removeClass("diceClicked");
+ 
+ }
+ 
+  var diceValue = 0;
+  var diceClicked ;
+
+ $("#yDresult1").click(function() {	
+ if ( $(this).text() == 1 || $(this).text() == 2 || $(this).text() == 3 || $(this).text() == 4 || $(this).text() == 5 || $(this).text() == 6   ) {
+ removeDiceClicked();
+ $(this).addClass("diceClicked");
+ diceValue = $(this).text();
+ diceClicked = "#yDresult1"; }
+ });
+ 
+  $("#yDresult2").click(function() { 	
+ if ( $(this).text() == 1 || $(this).text() == 2 || $(this).text() == 3 || $(this).text() == 4 || $(this).text() == 5 || $(this).text() == 6   ) {	
+  removeDiceClicked();
+ $(this).addClass("diceClicked");
+ diceValue = $(this).text();
+ diceClicked = "#yDresult2"; }
+ });
+ 
+  $("#rDresult1").click(function() {	
+ if ( $(this).text() == 1 || $(this).text() == 2 || $(this).text() == 3 || $(this).text() == 4 || $(this).text() == 5 || $(this).text() == 6   ) {
+  removeDiceClicked();
+ $(this).addClass("diceClicked");
+ diceValue = $(this).text();
+  diceClicked = "#rDresult1"; }
+ });
+ 
+  $("#rDresult2").click(function() {		
+ if ( $(this).text() == 1 || $(this).text() == 2 || $(this).text() == 3 || $(this).text() == 4 || $(this).text() == 5 || $(this).text() == 6   ) {
+  removeDiceClicked();
+ $(this).addClass("diceClicked");
+ diceValue = $(this).text();
+  diceClicked = "#rDresult2"; }
+ });
+ 
+  $("#bDresult1").click(function() {	
+ if ( $(this).text() == 1 || $(this).text() == 2 || $(this).text() == 3 || $(this).text() == 4 || $(this).text() == 5 || $(this).text() == 6   ) {
+   removeDiceClicked();
+ $(this).addClass("diceClicked");
+ diceValue = $(this).text();
+  diceClicked = "#bDresult1"; }
+ });
+ 
+  $("#bDresult2").click(function() {		
+ if ( $(this).text() == 1 || $(this).text() == 2 || $(this).text() == 3 || $(this).text() == 4 || $(this).text() == 5 || $(this).text() == 6   ) {
+   removeDiceClicked();
+ $(this).addClass("diceClicked");
+ diceValue = $(this).text();
+  diceClicked = "#bDresult2"; }
+ });
+ 
+  $("#gDresult1").click(function() { 	
+ if ( $(this).text() == 1 || $(this).text() == 2 || $(this).text() == 3 || $(this).text() == 4 || $(this).text() == 5 || $(this).text() == 6   ) {
+   removeDiceClicked();
+ $(this).addClass("diceClicked");
+ diceValue = $(this).text();
+ diceClicked = "#gDresult1";  }
+ });
+ 
+  $("#gDresult2").click(function() {		
+ if ( $(this).text() == 1 || $(this).text() == 2 || $(this).text() == 3 || $(this).text() == 4 || $(this).text() == 5 || $(this).text() == 6   ) {
+   removeDiceClicked();
+ $(this).addClass("diceClicked");
+ diceValue = $(this).text();
+  diceClicked = "#gDresult2";  }
+ });
+ 
+// FUNCTION THAT MOVES YELLOW PLAYERS
+function ySetPositionLocation(oldPosition,newPosition,seed) {
+oldPosID = "#" + oldPosition;
+newposID = "#" + newPosition;
+seedClass = "yMovingPlayer" + seed;
+$(oldPosID).removeClass(seedClass);
+$(newposID).addClass(seedClass);
+} //End of Yellow Position Function
+
+// FUNCTION THAT MOVES BLUE PLAYERS
+function bSetPositionLocation(oldPosition,newPosition,seed) {
+oldPosID = "#" + oldPosition;
+newposID = "#" + newPosition;
+seedClass = "bMovingPlayer" + seed;
+$(oldPosID).removeClass(seedClass);
+$(newposID).addClass(seedClass);
+} //End of Blu Position Function
+
+// FUNCTION THAT MOVES RED PLAYERS
+function rSetPositionLocation(oldPosition,newPosition,seed) {
+oldPosID = "#" + oldPosition;
+newposID = "#" + newPosition;
+seedClass = "rMovingPlayer" + seed;
+$(oldPosID).removeClass(seedClass);
+$(newposID).addClass(seedClass);} //End of Red Position Function
+
+// FUNCTION THAT MOVES GREEN PLAYERS
+function gSetPositionLocation(oldPosition,newPosition,seed) {
+oldPosID = "#" + oldPosition;
+newposID = "#" + newPosition;
+seedClass = "gMovingPlayer" + seed;
+$(oldPosID).removeClass(seedClass);
+$(newposID).addClass(seedClass);} //End of Green Position Function
+
+
+		//////////////////////  KNOCKOUT FUNCTION  /////////////////
+		
+		function knockOut(boardPositionPlayer, playerType, playerPosition, arrayLength ){ 
+		knockedOut = false;
+  	yseed1Class = "yMovingPlayer" + 1;
+	yseed2Class = "yMovingPlayer" + 2;
+	yseed3Class = "yMovingPlayer" + 3;
+	yseed4Class = "yMovingPlayer" + 4;
+	
+	rseed1Class = "rMovingPlayer" + 1;
+	rseed2Class = "rMovingPlayer" + 2;
+	rseed3Class = "rMovingPlayer" + 3;
+	rseed4Class = "rMovingPlayer" + 4;
+
+	bseed1Class = "bMovingPlayer" + 1;
+	bseed2Class = "bMovingPlayer" + 2;
+	bseed3Class = "bMovingPlayer" + 3;
+	bseed4Class = "bMovingPlayer" + 4;
+	
+	gseed1Class = "gMovingPlayer" + 1;
+	gseed2Class = "gMovingPlayer" + 2;
+	gseed3Class = "gMovingPlayer" + 3;
+	gseed4Class = "gMovingPlayer" + 4;
+	
+	
+   if ( playerType == "red" || playerType == "blue" || playerType == "green" ) {
+   
+if ( boardPositionPlayer == yellowMovementPatternSeed1[yellowSeedPosition[1]] ) {
+		$("#" + boardPositionPlayer).removeClass(yseed1Class);
+		yellowSeedPosition[1] = 0;
+		ySetPositionLocation(yellowMovementPatternSeed1[yellowSeedPosition[1]],yellowMovementPatternSeed1[yellowSeedPosition[1]],1);
+		playerPosition = arrayLength - 1 ;	
+		knockedOut = true;		
+		}
+if ( boardPositionPlayer == yellowMovementPatternSeed2[yellowSeedPosition[2]] ) {
+		$("#" + boardPositionPlayer).removeClass(yseed2Class);
+		yellowSeedPosition[2] = 0;
+		ySetPositionLocation(yellowMovementPatternSeed2[yellowSeedPosition[2]],yellowMovementPatternSeed2[yellowSeedPosition[2]],2);
+		playerPosition = arrayLength - 1 ;		
+		knockedOut = true;	
+		}
+		
+if ( boardPositionPlayer == yellowMovementPatternSeed3[yellowSeedPosition[3]] ) {
+		$("#" + boardPositionPlayer).removeClass(yseed3Class);
+		yellowSeedPosition[3] = 0;
+		ySetPositionLocation(yellowMovementPatternSeed3[yellowSeedPosition[3]],yellowMovementPatternSeed3[yellowSeedPosition[3]],3);
+		playerPosition = arrayLength - 1 ;		
+		knockedOut = true;	
+		}
+		
+if ( boardPositionPlayer == yellowMovementPatternSeed4[yellowSeedPosition[4]] ) {
+		$("#" + boardPositionPlayer).removeClass(yseed4Class);
+		yellowSeedPosition[4] = 0;
+		ySetPositionLocation(yellowMovementPatternSeed4[yellowSeedPosition[4]],yellowMovementPatternSeed4[yellowSeedPosition[4]],4);
+		playerPosition = arrayLength - 1 ;		
+		knockedOut = true;	
+		}
+		
+	} // Yellow Block
+	
+   if ( playerType == "yellow" || playerType == "blue" || playerType == "green" ) {
+   
+if ( boardPositionPlayer == redMovementPatternSeed1[redSeedPosition[1]] ) {
+		$("#" + boardPositionPlayer).removeClass(rseed1Class);
+		redSeedPosition[1] = 0;
+		rSetPositionLocation(redMovementPatternSeed1[redSeedPosition[1]],redMovementPatternSeed1[redSeedPosition[1]],1);
+		playerPosition = arrayLength - 1 ;		
+		knockedOut = true;	
+		}
+if ( boardPositionPlayer == redMovementPatternSeed2[redSeedPosition[2]] ) {
+		$("#" + boardPositionPlayer).removeClass(rseed2Class);
+		redSeedPosition[2] = 0; 
+		rSetPositionLocation(redMovementPatternSeed2[redSeedPosition[2]],redMovementPatternSeed2[redSeedPosition[2]],2);
+		playerPosition = arrayLength - 1 ;		
+		knockedOut = true;	
+		}
+		
+if ( boardPositionPlayer == redMovementPatternSeed3[redSeedPosition[3]] ) {
+		$("#" + boardPositionPlayer).removeClass(rseed3Class);
+		redSeedPosition[3] = 0;
+		rSetPositionLocation(redMovementPatternSeed3[redSeedPosition[3]],redMovementPatternSeed3[redSeedPosition[3]],3);
+		playerPosition = arrayLength - 1 ;		
+		knockedOut = true;	
+		}
+		
+if ( boardPositionPlayer == redMovementPatternSeed4[redSeedPosition[4]] ) {
+		$("#" + boardPositionPlayer).removeClass(rseed4Class);
+		redSeedPosition[4] = 0;
+		rSetPositionLocation(redMovementPatternSeed4[redSeedPosition[4]],redMovementPatternSeed4[redSeedPosition[4]],4);
+		playerPosition = arrayLength - 1 ;		
+		knockedOut = true;	
+		}
+		
+	} // Red Block
+	
+	
+   if ( playerType == "red" || playerType == "yellow" || playerType == "green" ) {
+   
+if ( boardPositionPlayer == blueMovementPatternSeed1[blueSeedPosition[1]] ) {
+		$("#" + boardPositionPlayer).removeClass(bseed1Class);
+		blueSeedPosition[1] = 0;
+		bSetPositionLocation(blueMovementPatternSeed1[blueSeedPosition[1]],blueMovementPatternSeed1[blueSeedPosition[1]],1);
+		playerPosition = arrayLength - 1 ;		
+		knockedOut = true;	
+		}
+if ( boardPositionPlayer == blueMovementPatternSeed2[blueSeedPosition[2]] ) {
+		$("#" + boardPositionPlayer).removeClass(bseed2Class);
+		blueSeedPosition[2] = 0;
+		bSetPositionLocation(blueMovementPatternSeed2[blueSeedPosition[2]],blueMovementPatternSeed2[blueSeedPosition[2]],2);
+		playerPosition = arrayLength - 1 ;		
+		knockedOut = true;	
+		}
+		
+if ( boardPositionPlayer == blueMovementPatternSeed3[blueSeedPosition[3]] ) {
+		$("#" + boardPositionPlayer).removeClass(bseed3Class);
+		blueSeedPosition[3] = 0;
+		bSetPositionLocation(blueMovementPatternSeed3[blueSeedPosition[3]],blueMovementPatternSeed3[blueSeedPosition[3]],3);
+		playerPosition = arrayLength - 1 ;		
+		knockedOut = true;	
+		}
+		
+if ( boardPositionPlayer == blueMovementPatternSeed4[blueSeedPosition[4]] ) {
+		$("#" + boardPositionPlayer).removeClass(bseed4Class);
+		blueSeedPosition[4] = 0;
+		bSetPositionLocation(blueMovementPatternSeed4[blueSeedPosition[4]],blueMovementPatternSeed4[blueSeedPosition[4]],4);
+		playerPosition = arrayLength - 1 ;		
+		knockedOut = true;	
+		}
+		
+	} // blue Block
+   if ( playerType == "red" || playerType == "blue" || playerType == "yellow" ) {
+   
+if ( boardPositionPlayer == greenMovementPatternSeed1[greenSeedPosition[1]] ) {
+		$("#" + boardPositionPlayer).removeClass(gseed1Class);
+		greenSeedPosition[1] = 0;
+		gSetPositionLocation(greenMovementPatternSeed1[greenSeedPosition[1]],greenMovementPatternSeed1[greenSeedPosition[1]],1);
+		playerPosition = arrayLength - 1 ;		
+		knockedOut = true;	
+		}
+if ( boardPositionPlayer == greenMovementPatternSeed2[greenSeedPosition[2]] ) {
+		$("#" + boardPositionPlayer).removeClass(gseed2Class);
+		greenSeedPosition[2] = 0;
+		gSetPositionLocation(greenMovementPatternSeed2[greenSeedPosition[2]],greenMovementPatternSeed2[greenSeedPosition[2]],2);
+		playerPosition = arrayLength - 1 ;		
+		knockedOut = true;	
+		}
+		
+if ( boardPositionPlayer == greenMovementPatternSeed3[greenSeedPosition[3]] ) {
+		$("#" + boardPositionPlayer).removeClass(gseed3Class);
+		greenSeedPosition[3] = 0;
+		gSetPositionLocation(greenMovementPatternSeed3[greenSeedPosition[3]],greenMovementPatternSeed3[greenSeedPosition[3]],3);
+		playerPosition = arrayLength - 1 ;		
+		knockedOut = true;	
+		}
+		
+if ( boardPositionPlayer == greenMovementPatternSeed4[greenSeedPosition[4]] ) {
+		$("#" + boardPositionPlayer).removeClass(gseed4Class);
+		greenSeedPosition[4] = 0;
+		gSetPositionLocation(greenMovementPatternSeed4[greenSeedPosition[4]],greenMovementPatternSeed4[yellowSeedPosition[4]],4);
+		playerPosition = arrayLength - 1 ;		
+		knockedOut = true;	
+		}
+		
+	} // Green Block 
+	 return knockedOut;
+}
+
+
+
+///////////  END OF KNOCK OUT FUNCTION  ////////////
+
+
+
+
+///////////  RESTART FUNCTION  ////////////
+
+
+
+  $("#restartButton").click(function() {
+  	yseed1Class = "yMovingPlayer" + 1;
+	yseed2Class = "yMovingPlayer" + 2;
+	yseed3Class = "yMovingPlayer" + 3;
+	yseed4Class = "yMovingPlayer" + 4;
+	
+	rseed1Class = "rMovingPlayer" + 1;
+	rseed2Class = "rMovingPlayer" + 2;
+	rseed3Class = "rMovingPlayer" + 3;
+	rseed4Class = "rMovingPlayer" + 4;
+
+	bseed1Class = "bMovingPlayer" + 1;
+	bseed2Class = "bMovingPlayer" + 2;
+	bseed3Class = "bMovingPlayer" + 3;
+	bseed4Class = "bMovingPlayer" + 4;
+	
+	gseed1Class = "gMovingPlayer" + 1;
+	gseed2Class = "gMovingPlayer" + 2;
+	gseed3Class = "gMovingPlayer" + 3;
+	gseed4Class = "gMovingPlayer" + 4;
+	
+		
+  for (var count = 1; count <= arrayLength ; count++ ){
+	posToClean =  count;
+	
+	$("#" + yellowMovementPatternSeed1[posToClean]).removeClass(yseed1Class);
+	$("#" + yellowMovementPatternSeed2[posToClean]).removeClass(yseed2Class);
+	$("#" + yellowMovementPatternSeed3[posToClean]).removeClass(yseed3Class);
+	$("#" + yellowMovementPatternSeed4[posToClean]).removeClass(yseed4Class);
+		
+	$("#" + redMovementPatternSeed1[posToClean]).removeClass(rseed1Class);
+	$("#" + redMovementPatternSeed2[posToClean]).removeClass(rseed2Class);
+	$("#" + redMovementPatternSeed3[posToClean]).removeClass(rseed3Class);
+	$("#" + redMovementPatternSeed4[posToClean]).removeClass(rseed4Class);
+
+	$("#" + blueMovementPatternSeed1[posToClean]).removeClass(bseed1Class);
+	$("#" + blueMovementPatternSeed2[posToClean]).removeClass(bseed2Class);
+	$("#" + blueMovementPatternSeed3[posToClean]).removeClass(bseed3Class);
+	$("#" + blueMovementPatternSeed4[posToClean]).removeClass(bseed4Class);
+	
+	$("#" + greenMovementPatternSeed1[posToClean]).removeClass(gseed1Class);
+	$("#" + greenMovementPatternSeed2[posToClean]).removeClass(gseed2Class);
+	$("#" + greenMovementPatternSeed3[posToClean]).removeClass(gseed3Class);
+	$("#" + greenMovementPatternSeed4[posToClean]).removeClass(gseed4Class);
+	
+ }
+
+ yellowSeedPosition = { '1' :0,  '2' :0,  '3' :0,  '4' :0};
+ redSeedPosition =    { '1' :0,  '2' :0,  '3' :0,  '4' :0};
+ greenSeedPosition =  { '1' :0,  '2' :0,  '3' :0,  '4' :0};
+ blueSeedPosition =   { '1' :0,  '2' :0,  '3' :0,  '4' :0};
+                // INITIAL SETTING OF BLUE POSITION
+ bSetPositionLocation(blueMovementPatternSeed1[blueSeedPosition[1]],blueMovementPatternSeed1[blueSeedPosition[1]],1);
+ bSetPositionLocation(blueMovementPatternSeed2[blueSeedPosition[2]],blueMovementPatternSeed2[blueSeedPosition[2]],2);
+ bSetPositionLocation(blueMovementPatternSeed3[blueSeedPosition[3]],blueMovementPatternSeed3[blueSeedPosition[3]],3);
+ bSetPositionLocation(blueMovementPatternSeed4[blueSeedPosition[4]],blueMovementPatternSeed4[blueSeedPosition[4]],4);
+               // INITIAL SETTING OF YELLOW POSITION
+ ySetPositionLocation(yellowMovementPatternSeed1[yellowSeedPosition[1]],yellowMovementPatternSeed1[yellowSeedPosition[1]],1); // @param2 former class cos it is the same value for old and new
+ ySetPositionLocation(yellowMovementPatternSeed2[yellowSeedPosition[2]],yellowMovementPatternSeed2[yellowSeedPosition[2]],2);
+ ySetPositionLocation(yellowMovementPatternSeed3[yellowSeedPosition[3]],yellowMovementPatternSeed3[yellowSeedPosition[3]],3);
+ ySetPositionLocation(yellowMovementPatternSeed4[yellowSeedPosition[4]],yellowMovementPatternSeed4[yellowSeedPosition[4]],4); 
+                // INITIAL SETTING OF GREEN POSITION
+ gSetPositionLocation(greenMovementPatternSeed1[greenSeedPosition[1]],greenMovementPatternSeed1[greenSeedPosition[1]],1);
+ gSetPositionLocation(greenMovementPatternSeed2[greenSeedPosition[2]],greenMovementPatternSeed2[greenSeedPosition[2]],2);
+ gSetPositionLocation(greenMovementPatternSeed3[greenSeedPosition[3]],greenMovementPatternSeed3[greenSeedPosition[3]],3);
+ gSetPositionLocation(greenMovementPatternSeed4[greenSeedPosition[4]],greenMovementPatternSeed4[greenSeedPosition[4]],4);
+                 // INITIAL SETTING OF RED POSITION
+ rSetPositionLocation(redMovementPatternSeed1[redSeedPosition[1]],redMovementPatternSeed1[redSeedPosition[1]],1); 
+ rSetPositionLocation(redMovementPatternSeed2[redSeedPosition[2]],redMovementPatternSeed2[redSeedPosition[2]],2); 
+ rSetPositionLocation(redMovementPatternSeed3[redSeedPosition[3]],redMovementPatternSeed3[redSeedPosition[3]],3); 
+ rSetPositionLocation(redMovementPatternSeed4[redSeedPosition[4]],redMovementPatternSeed4[redSeedPosition[4]],4); 
+});
+
+ // EVENT HANDLER THAT MOVES THE YELLOW PLAYERS
+
+  $("#yMoveButton1").click(function() {
+  if ( yellowSeedPosition[1] == 0 && diceValue < 6) { } else { if (yellowSeedPosition[1] == 0 && diceValue == 6) {diceValue = 1;}
+  if ( yellowSeedPosition[1] < arrayLength - diceValue  ){
+ oldPosition = yellowMovementPatternSeed1[yellowSeedPosition[1]];
+ yellowSeedPosition[1] = yellowSeedPosition[1] + parseInt(diceValue); // sets new position to + dice value on move on yellow player
+ newPosition = yellowMovementPatternSeed1[yellowSeedPosition[1]];
+  knockedOuted = knockOut(newPosition , "yellow" , yellowSeedPosition[1], arrayLength ); 
+  if ( knockedOuted ) {   
+	yellowSeedPosition[1] = arrayLength - 1;
+	newPosition = 196;
+  }
+ ySetPositionLocation(oldPosition ,newPosition, 1); }  } //@param gives current position of seed and tells the program which seed
+ diceValue = 0; 
+ $(diceClicked).removeClass("diceClicked");
+ $(diceClicked).text("");
+ });
+  
+  $("#yMoveButton2").click(function() {
+   if ( yellowSeedPosition[2] == 0 && diceValue < 6) { } else { if (yellowSeedPosition[2] == 0 && diceValue == 6) {diceValue = 1;}
+   if ( yellowSeedPosition[2] < arrayLength - diceValue ){
+ oldPosition = yellowMovementPatternSeed2[yellowSeedPosition[2]];
+ yellowSeedPosition[2] = yellowSeedPosition[2] + parseInt(diceValue); // sets new position to + dice value on move on yellow player
+ newPosition = yellowMovementPatternSeed2[yellowSeedPosition[2]];
+   knockedOuted = knockOut(newPosition , "yellow" , yellowSeedPosition[2], arrayLength );
+    if ( knockedOuted ) {   
+	yellowSeedPosition[2] = arrayLength - 1;
+	newPosition = 197;
+  }
+ ySetPositionLocation(oldPosition ,newPosition, 2); } }//@param gives current position of seed and tells the program which seed
+ diceValue = 0; 
+ $(diceClicked).removeClass("diceClicked");
+ $(diceClicked).text("");
+ });
+ 
+  $("#yMoveButton3").click(function() {
+   if ( yellowSeedPosition[3] == 0 && diceValue < 6) { } else { if (yellowSeedPosition[3] == 0 && diceValue == 6) {diceValue = 1;}
+   if ( yellowSeedPosition[3] < arrayLength - diceValue ){
+ oldPosition = yellowMovementPatternSeed3[yellowSeedPosition[3]];
+ yellowSeedPosition[3] = yellowSeedPosition[3] + parseInt(diceValue); // sets new position to + dice value on move on yellow player
+ newPosition = yellowMovementPatternSeed3[yellowSeedPosition[3]];
+   knockedOuted = knockOut(newPosition , "yellow" , yellowSeedPosition[3], arrayLength );
+    if ( knockedOuted ) {   
+	yellowSeedPosition[3] = arrayLength - 1;
+	newPosition = 198;
+  }
+ ySetPositionLocation(oldPosition ,newPosition, 3); } }//@param gives current position of seed and tells the program which seed 
+ diceValue = 0; 
+ $(diceClicked).removeClass("diceClicked");
+ $(diceClicked).text("");
+ });
+ 
+  $("#yMoveButton4").click(function() {
+   if ( yellowSeedPosition[4] == 0 && diceValue < 6) { } else { if (yellowSeedPosition[4] == 0 && diceValue == 6) {diceValue = 1;}
+   if ( yellowSeedPosition[4] < arrayLength - diceValue ){
+ oldPosition = yellowMovementPatternSeed4[yellowSeedPosition[4]];
+ yellowSeedPosition[4] = yellowSeedPosition[4] + parseInt(diceValue); // sets new position to + dice value on move on yellow player
+ newPosition = yellowMovementPatternSeed4[yellowSeedPosition[4]];
+  knockedOuted = knockOut(newPosition , "yellow" , yellowSeedPosition[4], arrayLength );
+   if ( knockedOuted ) {   
+	yellowSeedPosition[4] = arrayLength - 1;
+	newPosition = 199;
+  }
+ ySetPositionLocation(oldPosition ,newPosition, 4);  }} //@param gives current position of seed and tells the program which seed
+ diceValue = 0; 
+ $(diceClicked).removeClass("diceClicked");
+ $(diceClicked).text("");
+ });
+
+  // EVENT HANDLER THAT MOVES THE GREEN PLAYERS
+  $("#gMoveButton1").click(function() {
+  if ( greenSeedPosition[1] == 0 && diceValue < 6) { } else { if (greenSeedPosition[1] == 0 && diceValue == 6) {diceValue = 1;}
+  if ( greenSeedPosition[1] < arrayLength - diceValue ){
+ oldPosition = greenMovementPatternSeed1[greenSeedPosition[1]];
+ greenSeedPosition[1] = greenSeedPosition[1] + parseInt(diceValue); // sets new position to + dice value on move on yellow player
+ newPosition = greenMovementPatternSeed1[greenSeedPosition[1]];
+   knockedOuted = knockOut(newPosition , "green" , greenSeedPosition[1], arrayLength );
+ gSetPositionLocation(oldPosition ,newPosition, 1); } }
+   if ( knockedOuted ) {   
+	greenSeedPosition[1] = arrayLength - 1;
+	newPosition = 496;
+  }
+ diceValue = 0; 
+ $(diceClicked).removeClass("diceClicked");
+ $(diceClicked).text("");
+ });
+  
+  $("#gMoveButton2").click(function() {
+  if ( greenSeedPosition[2] == 0 && diceValue < 6) { } else { if (greenSeedPosition[2] == 0 && diceValue == 6) {diceValue = 1;}
+  if ( greenSeedPosition[2] < arrayLength - diceValue ){
+ oldPosition = greenMovementPatternSeed2[greenSeedPosition[2]];
+ greenSeedPosition[2] = greenSeedPosition[2] + parseInt(diceValue); // sets new position to + dice value on move on yellow player
+ newPosition = greenMovementPatternSeed2[greenSeedPosition[2]];
+  knockedOuted = knockOut(newPosition , "green" , greenSeedPosition[2], arrayLength );
+   if ( knockedOuted ) {   
+	greenSeedPosition[2] = arrayLength - 1;
+	newPosition = 497;
+  }
+ gSetPositionLocation(oldPosition ,newPosition, 2); } }
+ diceValue = 0; 
+ $(diceClicked).removeClass("diceClicked");
+ $(diceClicked).text("");
+ });
+ 
+  $("#gMoveButton3").click(function() {
+  if ( greenSeedPosition[3] == 0 && diceValue < 6) { } else { if (greenSeedPosition[3] == 0 && diceValue == 6) {diceValue = 1;}
+  if ( greenSeedPosition[3] < arrayLength - diceValue ){
+ oldPosition = greenMovementPatternSeed3[greenSeedPosition[3]];
+ greenSeedPosition[3] = greenSeedPosition[3] + parseInt(diceValue); // sets new position to + dice value on move on yellow player
+ newPosition = greenMovementPatternSeed3[greenSeedPosition[3]];
+  knockedOuted = knockOut(newPosition , "green" , greenSeedPosition[3], arrayLength );
+   if ( knockedOuted ) {   
+	greenSeedPosition[3] = arrayLength - 1;
+	newPosition = 498;
+  }
+ gSetPositionLocation(oldPosition ,newPosition, 3); }  }
+ diceValue = 0; 
+ $(diceClicked).removeClass("diceClicked");
+ $(diceClicked).text("");
+ });
+ 
+  $("#gMoveButton4").click(function() {
+  if ( greenSeedPosition[4] == 0 && diceValue < 6) { } else { if (greenSeedPosition[4] == 0 && diceValue == 6) {diceValue = 1;}
+  if ( greenSeedPosition[4] < arrayLength - diceValue ){
+ oldPosition = greenMovementPatternSeed4[greenSeedPosition[4]];
+ greenSeedPosition[4] = greenSeedPosition[4] + parseInt(diceValue); // sets new position to + dice value on move on yellow player
+ newPosition = greenMovementPatternSeed4[greenSeedPosition[4]];
+   knockedOuted = knockOut(newPosition , "green" , greenSeedPosition[4], arrayLength );
+   if ( knockedOuted ) {   
+	greenSeedPosition[4] = arrayLength - 1;
+	newPosition = 499;
+  }
+ gSetPositionLocation(oldPosition ,newPosition, 4); } }
+ diceValue = 0; 
+ $(diceClicked).removeClass("diceClicked");
+ $(diceClicked).text("");
+ });
+ 
+  // EVENT HANDLER THAT MOVES THE BLUE PLAYERS
+  $("#bMoveButton1").click(function() {
+  if ( blueSeedPosition[1] == 0 && diceValue < 6) { } else { if (blueSeedPosition[1] == 0 && diceValue == 6) {diceValue = 1;}
+  if ( blueSeedPosition[1] < arrayLength - diceValue ){
+ oldPosition = blueMovementPatternSeed1[blueSeedPosition[1]];
+ blueSeedPosition[1] = blueSeedPosition[1] + parseInt(diceValue); // sets new position to + dice value on move on yellow player
+ newPosition = blueMovementPatternSeed1[blueSeedPosition[1]];
+   knockedOuted = knockOut(newPosition , "blue" , blueSeedPosition[1], arrayLength );
+     if ( knockedOuted ) {
+	blueSeedPosition[1] = arrayLength - 1;
+	newPosition = 396;
+  }
+ bSetPositionLocation(oldPosition ,newPosition, 1); } }
+ diceValue = 0; 
+ $(diceClicked).removeClass("diceClicked");
+ $(diceClicked).text("");
+ });
+  
+  $("#bMoveButton2").click(function() {
+  if ( blueSeedPosition[2] == 0 && diceValue < 6) { } else { if (blueSeedPosition[2] == 0 && diceValue == 6) {diceValue = 1;}
+  if ( blueSeedPosition[2] < arrayLength - diceValue ){
+ oldPosition = blueMovementPatternSeed2[blueSeedPosition[2]];
+ blueSeedPosition[2] = blueSeedPosition[2] + parseInt(diceValue); // sets new position to + dice value on move on yellow player
+ newPosition = blueMovementPatternSeed2[blueSeedPosition[2]];
+   knockedOuted = knockOut(newPosition , "blue" , blueSeedPosition[2], arrayLength );
+    if ( knockedOuted ) {
+	blueSeedPosition[2] = arrayLength - 1;
+	newPosition = 397;
+  }
+ bSetPositionLocation(oldPosition ,newPosition, 2); } }
+ diceValue = 0; 
+ $(diceClicked).removeClass("diceClicked");
+ $(diceClicked).text("");
+ });
+ 
+  $("#bMoveButton3").click(function() {
+  if ( blueSeedPosition[3] == 0 && diceValue < 6) { } else { if (blueSeedPosition[3] == 0 && diceValue == 6) {diceValue = 1;}
+  if ( blueSeedPosition[3] < arrayLength - diceValue ){
+ oldPosition = blueMovementPatternSeed3[blueSeedPosition[3]];
+ blueSeedPosition[3] = blueSeedPosition[3] + parseInt(diceValue); // sets new position to + dice value on move on yellow player
+ newPosition = blueMovementPatternSeed3[blueSeedPosition[3]];
+    knockedOuted = knockOut(newPosition , "blue" , blueSeedPosition[3], arrayLength );
+    if ( knockedOuted ) {
+	blueSeedPosition[3] = arrayLength - 1;
+	newPosition = 398;
+  }
+ bSetPositionLocation(oldPosition ,newPosition, 3); } }
+ diceValue = 0; 
+ $(diceClicked).removeClass("diceClicked");
+ $(diceClicked).text("");
+ });
+ 
+  $("#bMoveButton4").click(function() {
+   if ( blueSeedPosition[4] == 0 && diceValue < 6) { } else { if (blueSeedPosition[4] == 0 && diceValue == 6) {diceValue = 1;}
+  if ( blueSeedPosition[4] < arrayLength - diceValue ){
+ oldPosition = blueMovementPatternSeed4[blueSeedPosition[4]];
+ blueSeedPosition[4] = blueSeedPosition[4] + parseInt(diceValue); // sets new position to + dice value on move on yellow player
+ newPosition = blueMovementPatternSeed4[blueSeedPosition[4]];
+    knockedOuted =  knockOut(newPosition , "blue" , blueSeedPosition[4], arrayLength );
+    if ( knockedOuted ) {
+	blueSeedPosition[4] = arrayLength - 1;
+	newPosition = 399;
+  }
+ bSetPositionLocation(oldPosition ,newPosition, 4); }  }
+ diceValue = 0; 
+ $(diceClicked).removeClass("diceClicked");
+ $(diceClicked).text("");
+ });
+ 
+  // EVENT HANDLER THAT MOVES THE RED PLAYERS
+  $("#rMoveButton1").click(function() {
+   if ( redSeedPosition[1] == 0 && diceValue < 6) { } else { if (redSeedPosition[1] == 0 && diceValue == 6) {diceValue = 1;}
+  if ( redSeedPosition[1] < arrayLength - diceValue ){
+ oldPosition = redMovementPatternSeed1[redSeedPosition[1]];
+ redSeedPosition[1] = redSeedPosition[1] + parseInt(diceValue); // sets new position to + dice value on move on yellow player
+ newPosition = redMovementPatternSeed1[redSeedPosition[1]];
+     knockedOuted = knockOut(newPosition , "red" , redSeedPosition[1], arrayLength );
+    if ( knockedOuted ) {
+	redSeedPosition[1] = arrayLength - 1;
+	newPosition = 296;
+  }
+ rSetPositionLocation(oldPosition ,newPosition, 1); } } 
+ diceValue = 0; 
+ $(diceClicked).removeClass("diceClicked");
+ $(diceClicked).text("");
+ });
+  
+  $("#rMoveButton2").click(function() {
+  if ( redSeedPosition[2] == 0 && diceValue < 6) { } else { if (redSeedPosition[2] == 0 && diceValue == 6) {diceValue = 1;}
+  if ( redSeedPosition[2] < arrayLength - diceValue ){
+ oldPosition = redMovementPatternSeed2[redSeedPosition[2]];
+ redSeedPosition[2] = redSeedPosition[2] + parseInt(diceValue); // sets new position to + dice value on move on yellow player
+ newPosition = redMovementPatternSeed2[redSeedPosition[2]];
+     knockedOuted =  knockOut(newPosition , "red" , redSeedPosition[2], arrayLength );
+     if ( knockedOuted ) {
+	 redSeedPosition[2] = arrayLength - 1;
+	newPosition = 297;
+  }
+ rSetPositionLocation(oldPosition ,newPosition, 2); } }
+ diceValue = 0; 
+ $(diceClicked).removeClass("diceClicked");
+ $(diceClicked).text("");
+ });
+ 
+  $("#rMoveButton3").click(function() {
+  if ( redSeedPosition[3] == 0 && diceValue < 6) { } else { if (redSeedPosition[3] == 0 && diceValue == 6) {diceValue = 1;}
+  if ( redSeedPosition[3] < arrayLength - diceValue ){
+ oldPosition = redMovementPatternSeed3[redSeedPosition[3]];
+ redSeedPosition[3] = redSeedPosition[3] + parseInt(diceValue); // sets new position to + dice value on move on yellow player
+ newPosition = redMovementPatternSeed3[redSeedPosition[3]];
+     knockedOuted =  knockOut(newPosition , "red" , redSeedPosition[3], arrayLength );
+     if ( knockedOuted ) {
+	redSeedPosition[3] = arrayLength - 1; 
+	newPosition = 298;
+  }
+ rSetPositionLocation(oldPosition ,newPosition, 3); }  }
+ diceValue = 0; 
+ $(diceClicked).removeClass("diceClicked");
+ $(diceClicked).text("");
+ });
+ 
+  $("#rMoveButton4").click(function() {
+  if ( redSeedPosition[4] == 0 && diceValue < 6) { } else { if (redSeedPosition[4] == 0 && diceValue == 6) {diceValue = 1;}
+  if ( redSeedPosition[4] < arrayLength - diceValue ){
+ oldPosition = redMovementPatternSeed4[redSeedPosition[4]];
+ redSeedPosition[4] = redSeedPosition[4] + parseInt(diceValue); // sets new position to + dice value on move on yellow player
+ newPosition = redMovementPatternSeed4[redSeedPosition[4]];
+     knockedOuted =  knockOut(newPosition , "red" , redSeedPosition[4], arrayLength );
+     if ( knockedOuted ) {
+	 redSeedPosition[4] = arrayLength - 1;
+	newPosition = 299;
+  }
+ rSetPositionLocation(oldPosition ,newPosition, 4); } }
+ diceValue = 0; 
+ $(diceClicked).removeClass("diceClicked");
+ $(diceClicked).text("");
+ });
+
+
+</script>
+
+
+</body>
+</html>

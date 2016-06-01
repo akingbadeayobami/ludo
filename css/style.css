@@ -1,0 +1,378 @@
+	body{
+		margin:0px;
+		padding:0px;
+		border:0px;
+		background:white;
+	}
+ 	#wrap{
+		width:100%;
+		height:100%;
+		padding:0px;
+		border:0px;
+		margin:0px;
+	}
+	#leftSide{
+		width:15%;
+		height:100%;
+		background: orange;
+		float:left;
+	}
+	#rightSide{
+		width:15%;
+		height:100%;
+		background: orange;
+		float:right;
+	}
+	 #board{
+		width:70%;
+		height:100%;
+		background: white;
+		float:left;
+	}
+
+	.cRed{
+		background: red;
+	}
+	.cBlue{
+		background: skyblue;
+	}
+	.cGreen{
+		background: green;
+	}
+	.cYellow{
+		background: yellow;	
+	}
+	
+	#upperDiv{
+		height: 40%;
+		width:100%;
+		float:left;
+		background: black;
+	}
+	#middleDiv{
+		height: 20%;
+		width:100%;
+		float:left;
+		background: black;
+
+	}
+	#lowerDiv{
+		height: 40%;
+		width:100%;
+		float:left;
+		background: black;
+	}
+	
+	#yellowBox{
+		float:left;
+		height:100%;
+		width:40%;
+		background:yellow url( '../img/dot.png' );
+
+	}
+	#greenBox{
+		float:left;
+		height:100%;
+		width:40%;
+		background:green url( '../img/dot.png' );
+
+	}
+	#redBox{
+		float:left;
+		height:100%;
+		width:40%;
+		background:red  url( '../img/dot.png' );
+	}
+	#blueBox{
+		float:left;
+		height:100%;
+		width:40%;
+		background:skyblue url( '../img/dot.png' );
+	}
+	
+	#upper3by6{
+		float:left;
+		height:100%;
+		width:20%;
+		background: white;
+    }
+	#lower3by6{
+		float:left;
+		height:100%;
+		width:20%;
+		background: white;
+    }
+	#left3by6{
+		float:left;
+		height:100%;
+		width:40%;
+		background: white;
+    }
+	#right3by6{
+		float:left;
+		height:100%;
+		width:40%;
+		background: white;
+    }
+	#center3by3{
+		float:left;
+		height:100%;
+		width:20%;
+		background: purple;
+    }
+   
+   table{
+	width:100%;
+	height:100%;
+	border:0px;
+	cellspacing: 0px;
+	cellpadding: 0px;
+	
+    }
+	td{ 
+		text-align:center;
+		padding:0px;
+		margin:0px;
+
+
+   }
+
+    #playerYellow{
+     height:45%;
+     width:90%;
+     background:yellow;
+     float:left;
+     margin:5%;	
+     margin-top: 10% ;
+     margin-bottom: 10% ; 
+     border: 2px solid black;
+   }
+   			
+	#playerRed{
+     height:45%;
+     width:90%;
+     background:red;
+     float:left;
+     margin:5%;	
+     margin-top: 10% ;
+     margin-bottom: 10% ;
+	 border: 2px solid black;
+   }
+   			
+	#playerGreen{
+    height:45%;
+     width:90%;
+     background:green;
+     float:left;
+     margin:5%;	
+     margin-top: 10% ;
+     margin-bottom: 10%  ; 
+     border: 2px solid black;	 
+    }
+   			
+	#playerBlue{
+    height:45%;
+     width:90%;
+     background:skyblue;
+     float:left;
+     margin:5%;	
+     margin-top: 10% ;
+     margin-bottom: 10%  ; 
+	 border: 2px solid black;
+
+    }
+	
+	#ydiceWrap{
+	background:yellow;
+	width:100%;
+	height:20%;
+	float: left;
+	}
+	#rdiceWrap{
+	background:red;
+	width:100%;
+	height:20%;
+	float: left;
+	}
+	#bdiceWrap{
+	background:skyblue;
+	width:100%;
+	height:20%;
+	float: left;
+	}
+	#gdiceWrap{
+	background:green;
+	width:100%;
+	height:20%;
+	float: left;
+	}
+   .diceResult1{
+   	text-align: center;
+	width:40%;
+	background:white;
+	height:70%;
+	float: left;
+	margin:5%;
+   }
+    .diceResult2{
+   	text-align: center;
+	width:40%;
+	background:white;
+	height:70%;
+	float: left;	
+	margin:5%;
+   }
+    
+	/* MOVING PLAYERS  */
+	
+	
+   .yMovingPlayer1{
+   background:yellow;
+   border:2px solid black;
+   }   
+   .yMovingPlayer2{
+   background:yellow;
+   border:2px solid black;
+   }   
+   .yMovingPlayer3{
+   background:yellow;
+   border:2px solid black;
+   }   
+   .yMovingPlayer4{
+   background:yellow;
+   border:2px solid black;
+   }
+   .bMovingPlayer1{
+   background:skyblue;
+   border:2px solid black;
+   }   
+   .bMovingPlayer2{
+   background:skyblue;
+   border:2px solid black;
+   }   
+   .bMovingPlayer3{
+   background:skyblue;
+   border:2px solid black;
+   }   
+   .bMovingPlayer4{
+   background:skyblue;
+   border:2px solid black;
+   }
+   .gMovingPlayer1{
+   background:green;
+   border:2px solid black;
+   }   
+   .gMovingPlayer2{
+   background:green;
+   border:2px solid black;
+   }   
+   .gMovingPlayer3{
+   background:green;
+   border:2px solid black;
+   }   
+   .gMovingPlayer4{
+   background:green;
+   border:2px solid black;
+   }
+   .rMovingPlayer1{
+   background:red;
+   border:2px solid black;
+   }   
+   .rMovingPlayer2{
+   background:red;
+   border:2px solid black;
+   }   
+   .rMovingPlayer3{
+   background:red;
+   border:2px solid black;
+   }   
+   .rMovingPlayer4{
+   background:red;
+   border:2px solid black;
+   }
+   .maxSize{
+   width:100%;
+   height:100%;
+   }
+   .yHousePlayer{
+   border:2px solid black;
+   background:yellow;
+   padding:5%;
+   max-width:5%;
+   margin:2px;
+   }
+   .rHousePlayer{
+   border:2px solid black;
+   background:red;
+   padding:5%;
+   max-width:5%;
+   margin:2px;
+   }
+   .bHousePlayer{
+   border:2px solid black;
+   background:skyblue;
+   padding:5%;
+   max-width:5%;
+   margin:2px;
+   float:right;
+   clear:right;
+   }
+   .gHousePlayer{
+   border:2px solid black;
+   background:green;
+   padding:5%;
+   max-width:5%;
+   margin:2px;
+   float:right;
+   clear:right;
+   }
+   .diceClicked{
+   background:grey;
+   }
+   .seedHome{
+   width:80%;
+   height:33%;
+   margin: 5% 10%;
+   }
+   .innerSeedHome{
+   width:45%;
+   height:45%;
+   float:left;
+   margin:2%;
+   }
+   .seedHouse{
+   width:50%;
+   margin:25%;
+   height:50%;
+   }
+   .innerSeedHouse{
+   width:35%;
+   height:30%;
+   float:left;
+   margin:2%;
+   }
+   
+   .seedProto{
+   width:25px;
+   height:25px;
+   margin: auto;
+   padding: 15px;
+   text-align: center;
+   border:1px solid black;
+   background: orange;
+   -webkit-border-radius:25px;
+   -webkit-box-shadow:rgb(220, 220, 220) 2px 2px 2px ; 
+    
+   }
+      .seedProto1{
+   width:80%;
+   height:80%;
+   margin: auto;
+   padding: 15px;
+   text-align: center;
+   border:1px solid black;
+   background: orange;
+   -webkit-border-radius:25px;
+   -webkit-box-shadow:rgb(220, 220, 220) 2px 2px 2px ; 
+    
+   }
